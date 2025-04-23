@@ -58,9 +58,7 @@ void RenderWindow() {
         if (UI::Button("#" + map.name))
             map.Play();
 
-        UI::PopStyleColor();
-        if (i < 40)
-            UI::PopStyleColor();
+        UI::PopStyleColor(i < 40 ? 2 : 1);
     }
 }
 
