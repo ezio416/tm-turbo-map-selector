@@ -1,5 +1,5 @@
 // c 2025-04-23
-// m 2025-04-23
+// m 2025-04-24
 
 const string  pluginColor = "\\$88F";
 const string  pluginIcon  = Icons::ClockO;
@@ -10,6 +10,9 @@ Map@[] maps;
 
 void Main() {
     auto App = cast<CTrackMania>(GetApp());
+
+    while (App.ChallengeInfos.Length < 200)
+        yield();
 
     for (uint i = 0; i < App.ChallengeInfos.Length; i++) {
         CGameCtnChallengeInfo@ map = App.ChallengeInfos[i];
